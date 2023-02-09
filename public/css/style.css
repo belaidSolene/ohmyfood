@@ -208,6 +208,12 @@ footer ul li {
   font-weight: bold;
   padding: 0 25px 0 15px;
 }
+.regle__box__etape--accent {
+  background: #f2eafb;
+}
+.regle__box__etape--accent .fa-solid {
+  color: #9356DC;
+}
 
 .resto {
   background-color: #F0F0F0;
