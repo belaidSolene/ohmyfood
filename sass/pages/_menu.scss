@@ -1,0 +1,48 @@
+.menu {
+    background-color: $color-bg;
+    border-radius: 2.5em 2.5em 0 0;
+    padding: 0 0.8em 2em;
+   
+    &__head {
+        padding: 1.5em 1em 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-family: $font-logo;
+            font-weight: 400;
+        }
+
+        .fa-heart {
+            font-size: 1.64em;
+        }
+    }
+
+    &__plat {
+        padding: 1.5em 0 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+
+        h2 {
+            align-self: flex-start;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            padding: 0 0 1em;
+        }
+
+        &__card {
+            width: 100%;
+            background-color: $color-contrast;
+            border-radius: 0.9em;
+            margin: 0 1em;
+            @include shadow();
+        }
+    }
+
+    .btn {
+        margin: 1em auto;
+    }
+}

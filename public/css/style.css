@@ -219,4 +219,46 @@ footer ul li {
   object-fit: cover;
 }
 
+.menu {
+  background-color: #F0F0F0;
+  border-radius: 2.5em 2.5em 0 0;
+  padding: 0 0.8em 2em;
+}
+.menu__head {
+  padding: 1.5em 1em 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__head h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+}
+.menu__head .fa-heart {
+  font-size: 1.64em;
+}
+.menu__plat {
+  padding: 1.5em 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.menu__plat h2 {
+  align-self: flex-start;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  padding: 0 0 1em;
+}
+.menu__plat__card {
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 0.9em;
+  margin: 0 1em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
+}
+.menu .btn {
+  margin: 1em auto;
+}
+
 /*# sourceMappingURL=style.css.map */
