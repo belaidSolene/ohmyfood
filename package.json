@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "permet aux",
+  "main": "restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte",
+  "scripts": {
+    "sass" : "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belaidSolene/ohmyfood.git"
+  },
+  "author": "belaid solene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belaidSolene/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/belaidSolene/ohmyfood#readme"
+}
