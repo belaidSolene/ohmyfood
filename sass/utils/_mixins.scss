@@ -1,0 +1,5 @@
+
+
+@mixin shadow($int: 0.3, $where: 0.2em 0.2em 0.7em,  $color:#000) {
+       box-shadow: $where rgb(red($color), green($color), blue($color), $int);
+}

@@ -1,0 +1,10 @@
+.btn {
+    width: fit-content;
+    border-radius: 1.2em;
+    background: linear-gradient($color-secondary, $color-primary);
+    color: $color-contrast;
+    @include shadow;
+    padding: 1em;
+    cursor: pointer;
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+header {
+    width: 100%;
+    margin: 0.7em 0 $height-rect;
+    padding: 0.9em 0;
+}
+
+.head__page {
+    &-index {
+        text-align: center;
+        @include shadow(0.25, $shadow-header);
+    }
+
+    &-menu {
+        display: grid;
+        grid-template-columns: 10% auto;
+
+        a {
+            padding: 0 0.9em;
+            display: flex;
+            align-items: center;
+
+            .fa-arrow-left {
+                font-size: 1.4em;
+            }
+        }
+
+        img {
+            margin : 0 auto;
+        }
+    }
+}

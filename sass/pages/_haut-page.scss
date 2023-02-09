@@ -1,0 +1,28 @@
+.haut-page {
+    background-color: $color-bg;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0 0 50px;
+
+    &__localisation {
+        //ombre à ajouter ici ou header ??
+        width: 100%;
+        font-weight: 500;
+        padding: 15px 0;
+        background-color: darken($color: $color-bg, $amount: 5);
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }  
+    h1 {
+        font-size: 1.8em;
+        padding: 40px 0 10px;
+        white-space: pre-line;
+    }
+    h2 {
+        padding: 0 0 20px;
+        white-space: pre-line;
+    }
+}
