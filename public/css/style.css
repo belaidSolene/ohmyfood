@@ -52,6 +52,34 @@ footer h3 {
   text-align: center;
 }
 
+.card-desc {
+  padding: 6px 20px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-desc__txt {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6em;
+}
+.card-desc__txt__title {
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.card-desc__txt__title + p {
+  font-size: 1.07em;
+  font-weight: 300;
+}
+.card-desc .fa-heart {
+  font-size: 1.67em;
+}
+.card-desc__price {
+  font-size: 0.87em;
+  padding: 0 0 0.4em;
+  align-self: flex-end;
+}
+
 .container {
   max-width: 767px;
 }
@@ -82,6 +110,19 @@ header {
   margin: 0 auto;
 }
 
+footer {
+  background-color: #353535;
+  color: #FFF;
+  padding: 30px 25px;
+}
+footer ul {
+  list-style: none;
+  padding: 15px 0;
+}
+footer ul li {
+  padding: 15px 0 0;
+}
+
 .haut-page {
   background-color: #F0F0F0;
   display: flex;
@@ -107,6 +148,47 @@ header {
 .haut-page h2 {
   padding: 0 0 20px;
   white-space: pre-line;
+}
+
+.regle {
+  padding: 1.7em 0.2em 1.5em 1.2em;
+}
+.regle__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.regle__box__etape {
+  width: 80%;
+  background-color: #F0F0F0;
+  display: flex;
+  align-items: baseline;
+  border-radius: 1.1em;
+  padding: 1.17em;
+  margin: 0.7em 0;
+  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
+}
+.regle__box__etape__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9356DC;
+  color: #FFF;
+  font-size: 0.7em;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  position: relative;
+  right: 35px;
+}
+.regle__box__etape .fa-solid {
+  color: #353535;
+  font-size: 19px;
+}
+.regle__box__etape__txt {
+  font-size: 0.86em;
+  font-weight: bold;
+  padding: 0 25px 0 15px;
 }
 
 .resto {

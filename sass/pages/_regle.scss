@@ -1,0 +1,46 @@
+.regle {
+    padding: 1.7em 0.2em 1.5em 1.2em;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__etape {
+            width: 80%;
+            background-color: $color-bg;
+            display: flex;
+            align-items: baseline;
+            border-radius: $etp-border-radius;
+            padding: 1.17em;
+            margin: 0.7em 0;
+            @include shadow;
+          
+            &__num {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-primary;
+                color: $color-contrast;
+                font-size: 0.7em;
+                height: 2em;
+                width: 2em;
+                border-radius: 50%;
+                position: relative;
+                right: 35px;
+            }
+
+            .fa-solid {
+                color: $color-bg-footer;
+                font-size: 19px;
+            }
+
+
+            &__txt {
+                font-size: 0.86em;
+                font-weight: bold;
+                padding: 0 25px 0 15px;
+            }
+        }
+    }
+}
