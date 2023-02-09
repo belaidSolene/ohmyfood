@@ -26,5 +26,17 @@
             width: 100%;
             object-fit: cover;
         }
+
+        &__encart-new {
+            display: inline-block;
+            background-color: $color-tertiary;
+            border-radius: 0.2em;
+            color: darken($color: $color-tertiary, $amount: 30);
+            font-weight: 500;
+            padding: 0.5em 0.8em;
+            position: relative;
+            bottom: 15.3em;
+            left: 12em;
+        }
     }
 }

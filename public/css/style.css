@@ -67,12 +67,22 @@ footer h3 {
   line-height: 1.6em;
 }
 .card-desc__txt__title {
-  font-size: 1.2em;
   font-weight: 900;
 }
 .card-desc__txt__title + p {
-  font-size: 1.07em;
   font-weight: 300;
+}
+.card-desc__txt h5 {
+  font-size: 1.2em;
+}
+.card-desc__txt h5 + p {
+  font-size: 1.07em;
+}
+.card-desc__txt h3 {
+  font-size: 1em;
+}
+.card-desc__txt h3 + p {
+  font-size: 0.84em;
 }
 .card-desc .fa-heart {
   font-size: 1.67em;
@@ -225,6 +235,17 @@ footer ul li {
   height: 75%;
   width: 100%;
   object-fit: cover;
+}
+.resto__card__encart-new {
+  display: inline-block;
+  background-color: #99E2D0;
+  border-radius: 0.2em;
+  color: #32b091;
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+  position: relative;
+  bottom: 15.3em;
+  left: 12em;
 }
 
 .menu {
