@@ -1,4 +1,4 @@
-//charte grphique
+//charte graphique
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -6,6 +6,12 @@ $color-contrast: #FFF;
 
 $color-bg-footer: #353535;
 $color-bg: #F0F0F0;
+
+//bouton
+$btn-border-radius: 1.2em;
+$btn-amount-change-hoover : 5;
+$btn-light-clr-prim : lighten($color-primary, $btn-amount-change-hoover);
+$btn-light-clr-secon : lighten($color-secondary, $btn-amount-change-hoover);
 
 /*
     INDEX
@@ -17,9 +23,9 @@ $shadow-header: 0 $height-rect;
 //regle__etape
 $etp-border-radius : 1.1em;
 
-
 /*
     MENU
 */
 //valeur superposition menu sur bg-menu
 $position-menu: -3em;
+
