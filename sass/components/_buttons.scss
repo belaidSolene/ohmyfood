@@ -1,10 +1,19 @@
 .btn {
     width: fit-content;
-    border-radius: 1.2em;
+    border-radius: $btn-border-radius;
     background: linear-gradient($color-secondary, $color-primary);
     color: $color-contrast;
     @include shadow;
     padding: 1em;
     cursor: pointer;
     text-align: center;
+    @include after-pos-init;
+    @include hover-after-op;
+
+    &::after {
+        @include after-elem-op;
+        border-radius: $btn-border-radius;
+        background: linear-gradient($btn-light-clr-secon, $btn-light-clr-prim);
+        @include shadow($btn-amount-change-hoover*0.1);
+    }
 }

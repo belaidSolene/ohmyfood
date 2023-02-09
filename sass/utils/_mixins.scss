@@ -3,3 +3,34 @@
 @mixin shadow($int: 0.3, $where: 0.2em 0.2em 0.7em,  $color:#000) {
        box-shadow: $where rgb(red($color), green($color), blue($color), $int);
 }
+
+@mixin after-elem-op() {
+       content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+}
+
+@mixin after-pos-init() {
+       position: relative;
+       z-index: 1;
+}
+
+@mixin hover-after-op ($bool : false){
+       &:hover {
+              &::after {
+                  opacity: 1;
+              }
+          }
+      
+          @if ($bool == 1) {
+              .fa-solid::after {
+                     opacity: 1;
+              }
+          }
+}

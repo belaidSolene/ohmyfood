@@ -53,6 +53,25 @@ footer h3 {
   padding: 1em;
   cursor: pointer;
   text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 1.2em;
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.5);
 }
 
 .card-desc {
