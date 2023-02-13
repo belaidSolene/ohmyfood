@@ -29,7 +29,7 @@
           }
       
           @if ($bool == 1) {
-              .fa-solid::after {
+              .menu__plat__card__check {
                      opacity: 1;
               }
           }
