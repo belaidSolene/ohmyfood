@@ -268,7 +268,7 @@ footer ul li {
   padding: 0.5em 0.8em;
   position: relative;
   bottom: 15.3em;
-  left: 12em;
+  left: 63%;
 }
 
 .menu {
@@ -320,7 +320,7 @@ footer ul li {
   margin: 1em auto;
 }
 
-.menu__plat__card {
+.menu__plat__card--grid {
   width: 100%;
   background-color: #FFF;
   overflow: hidden;
@@ -334,10 +334,10 @@ footer ul li {
   position: relative;
   z-index: 1;
 }
-.menu__plat__card:hover::after {
+.menu__plat__card--grid:hover::after {
   opacity: 1;
 }
-.menu__plat__card::after {
+.menu__plat__card--grid::after {
   content: "";
   position: absolute;
   top: 0;
@@ -350,25 +350,25 @@ footer ul li {
   display: grid;
   grid-template-columns: 1fr 2.5em 20%;
 }
-.menu__plat__card__title {
+.menu__plat__card--grid__title {
   font-size: 1em;
   padding-top: 0.5em;
 }
-.menu__plat__card__subtitle {
+.menu__plat__card--grid__subtitle {
   grid-row-start: 2;
   font-size: 0.84em;
   padding-bottom: 0.5em;
 }
-.menu__plat__card--ellipsis {
+.menu__plat__card--grid--ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__plat__card__price {
+.menu__plat__card--grid__price {
   grid-area: 2;
   padding-bottom: 0.5em;
 }
-.menu__plat__card .fa-circle-check {
+.menu__plat__card--grid .fa-circle-check {
   grid-row: 1/span 2;
   display: flex;
   justify-content: center;
@@ -377,10 +377,10 @@ footer ul li {
   background-color: #99E2D0;
   height: 100%;
 }
-.menu__plat__card--reduce {
+.menu__plat__card--grid--reduce {
   grid-template-columns: 1fr 2.5em 20%;
 }
-.menu__plat__card--reduce .fa-circle-check {
+.menu__plat__card--grid--reduce .fa-circle-check {
   background-color: #99E2D0;
   height: 100%;
 }
@@ -404,7 +404,7 @@ footer ul li {
 
 .bg-img {
   height: 15em;
-  background-image: url("../img/restaurants/la-palette-du-gout.jpg");
+  background-image: url("../img/restaurants/la-note-enchantee.jpg");
   background-size: cover;
 }
 

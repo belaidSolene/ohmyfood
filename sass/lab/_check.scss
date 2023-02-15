@@ -9,7 +9,7 @@
 }
 
 
-.menu__plat__card {
+.menu__plat__card--grid {
   width: 100%;
   background-color: $color-contrast;
   overflow: hidden;
@@ -35,7 +35,7 @@
     font-size: 1em;
     padding-top: 0.5em;
   }
-
+  
 
   &__subtitle {
     grid-row-start: 2;
