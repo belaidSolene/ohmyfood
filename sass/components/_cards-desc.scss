@@ -30,6 +30,11 @@
         //menu card
         h3 {
             font-size: 1em;
+            flex: 1;
+    
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             +p {
                 font-size: 0.84em;
