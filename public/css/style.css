@@ -332,7 +332,7 @@ footer ul li {
   padding-left: 0.8em;
   box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
   display: grid;
-  grid-template-columns: 1fr 2.5em 0.5em;
+  grid-template-columns: 1fr 2.5em 1px;
   grid-template-rows: 2fr;
   align-items: center;
 }
@@ -343,12 +343,11 @@ footer ul li {
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
   display: grid;
-  grid-template-columns: 1fr 2.5em 3.5em;
-}
-.menu__plat__card::after .fa-circle-check {
-  background-color: #99E2D0;
-  height: 100%;
+  grid-template-columns: 1fr 2.5em 20%;
 }
 .menu__plat__card__title {
   font-size: 1em;
@@ -374,13 +373,26 @@ footer ul li {
   justify-content: center;
   align-items: center;
   color: #FFF;
+  background-color: #99E2D0;
+  height: 100%;
 }
 .menu__plat__card--reduce {
-  grid-template-columns: 1fr 2.5em 3.5em;
+  grid-template-columns: 1fr 2.5em 20%;
 }
 .menu__plat__card--reduce .fa-circle-check {
   background-color: #99E2D0;
   height: 100%;
+}
+
+.fa-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-heart {
+  font-size: 1.64em;
 }
 
 /*# sourceMappingURL=style.css.map */
