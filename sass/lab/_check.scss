@@ -1,10 +1,10 @@
 //TEST DANS MENU--LA-NOTE-ENCHANTEE
 
 .bg-menu--clip {
-  //margin-top: -5em;
+//margin-top: -5em;
 
   img {
-    clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0 100%);
+  //  clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0 100%);
   }
 }
 
@@ -18,11 +18,13 @@
   @include shadow();
 
   display: grid;
-  grid-template-columns: 1fr 2.5em 1px;
+  grid-template-columns: 1fr 2.5em 0;
   grid-template-rows: 2fr;
   align-items: center;
 
-
+  @include after-pos-init;
+  @include hover-after-op;
+  
   &::after {
     @include after-elem-op;
     display: grid;
