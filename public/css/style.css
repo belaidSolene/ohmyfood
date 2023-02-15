@@ -93,6 +93,10 @@ footer h3 {
 }
 .card-desc__txt h3 {
   font-size: 1em;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card-desc__txt h3 + p {
   font-size: 0.84em;
@@ -341,6 +345,69 @@ footer ul li {
 }
 .menu .btn {
   margin: 1em auto;
+}
+
+.bg-menu--clip img {
+  clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0 100%);
+}
+
+.menu__plat__card {
+  width: 100%;
+  background-color: #FFF;
+  overflow: hidden;
+  border-radius: 0.9em;
+  padding-left: 0.8em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 1fr 2.5em 0.5em;
+  grid-template-rows: 2fr;
+  align-items: center;
+}
+.menu__plat__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr 2.5em 3.5em;
+}
+.menu__plat__card::after .fa-circle-check {
+  background-color: #99E2D0;
+  height: 100%;
+}
+.menu__plat__card__title {
+  font-size: 1em;
+  padding-top: 0.5em;
+}
+.menu__plat__card__subtitle {
+  grid-row-start: 2;
+  font-size: 0.84em;
+  padding-bottom: 0.5em;
+}
+.menu__plat__card--ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__plat__card__price {
+  grid-area: 2;
+  padding-bottom: 0.5em;
+}
+.menu__plat__card .fa-circle-check {
+  grid-row: 1/span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+}
+.menu__plat__card--reduce {
+  grid-template-columns: 1fr 2.5em 3.5em;
+}
+.menu__plat__card--reduce .fa-circle-check {
+  background-color: #99E2D0;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
