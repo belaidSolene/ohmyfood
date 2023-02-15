@@ -320,10 +320,6 @@ footer ul li {
   margin: 1em auto;
 }
 
-.bg-menu--clip img {
-  clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0 100%);
-}
-
 .menu__plat__card {
   width: 100%;
   background-color: #FFF;
@@ -332,9 +328,14 @@ footer ul li {
   padding-left: 0.8em;
   box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
   display: grid;
-  grid-template-columns: 1fr 2.5em 1px;
+  grid-template-columns: 1fr 2.5em 0;
   grid-template-rows: 2fr;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.menu__plat__card:hover::after {
+  opacity: 1;
 }
 .menu__plat__card::after {
   content: "";
@@ -389,10 +390,22 @@ footer ul li {
   background-clip: padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.64em;
+  position: relative;
+  bottom: 31px;
+  left: 94.35%;
+  transform: scaleX(0);
+  transform-origin: center bottom;
+  transition: transform 250ms;
+}
+.fa-gradient:hover {
+  transform: scaleX(1);
 }
 
-.fa-heart {
-  font-size: 1.64em;
+.bg-img {
+  height: 15em;
+  background-image: url("../img/restaurants/la-palette-du-gout.jpg");
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

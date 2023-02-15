@@ -5,8 +5,16 @@
 	background-clip: padding-box;
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-}
-
-.fa-heart {
     font-size: 1.64em;
+
+    position: relative;
+    bottom: 31px;
+    left: 94.35%;
+    transform: scaleX(0);
+    transform-origin: center bottom;
+    transition: transform 250ms;
+    
+    &:hover {
+        transform: scaleX(1);        
+    }
 }
