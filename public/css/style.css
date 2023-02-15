@@ -110,33 +110,6 @@ footer h3 {
   align-self: flex-end;
 }
 
-.test {
-  color: pink;
-  width: 150px;
-  background-color: #FFF;
-  border-radius: 0.9em;
-  margin: 0 1em;
-  overflow: hidden;
-  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
-}
-
-.test-card {
-  padding: 6px 20px 0 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.test-card__txt {
-  background-color: blanchedalmond;
-  min-width: 0;
-  flex: 1;
-}
-.test-card__txt__title {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .bg-menu img {
   width: 100%;
   object-fit: cover;
