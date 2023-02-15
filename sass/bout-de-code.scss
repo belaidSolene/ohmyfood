@@ -1,0 +1,62 @@
+//ds _menus
+
+overflow: hidden;
+margin: 0 1em;
+@include shadow();
+
+display: flex;
+justify-content: space-between;
+
+&__check {
+    @include after-pos-init;
+
+    .fa-solid {
+        color: $color-contrast;
+    }
+
+    &::after {
+        @include after-elem-op;
+        width: 22%;
+        background: $color-tertiary;
+        text-align: center;
+        color: $color-contrast;
+        height: inherit;
+
+        .fa-solid {
+            margin: 50% auto;
+        }
+    }
+}
+
+//ds _cards-desc
+&--menu {
+width: 100%;
+padding-right: 0;
+@include after-pos-init;
+h3 {
+    font-size: 1em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    +p {
+        font-size: 0.84em;
+    }
+}
+@include hover-after-op(1);
+
+&::after {
+    @include after-elem-op;
+}
+}
+
+
+//pour ellipsis
+&__txt {
+    max-width: calc(50%);
+   // min-width: 0;
+    &__title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

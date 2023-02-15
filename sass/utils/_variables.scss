@@ -13,9 +13,9 @@ $btn-amount-change-hoover : 5;
 $btn-light-clr-prim : lighten($color-primary, $btn-amount-change-hoover);
 $btn-light-clr-secon : lighten($color-secondary, $btn-amount-change-hoover);
 
-/*
-    INDEX
-*/
+//
+//   INDEX
+//
 //valeur ombre/rectangle gris foncé au-dessus localisation
 $height-rect : 0.3em;
 $shadow-header: 0 $height-rect;
@@ -23,9 +23,8 @@ $shadow-header: 0 $height-rect;
 //regle__etape
 $etp-border-radius : 1.1em;
 
-/*
-    MENU
-*/
+//
+//    MENU
+//
 //valeur superposition menu sur bg-menu
 $position-menu: -3em;
-
