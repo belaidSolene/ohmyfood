@@ -18,18 +18,20 @@
   @include shadow();
 
   display: grid;
-  grid-template-columns: 1fr 2.5em 0;
+  grid-template-columns: 1fr 2.5em 0%;
   grid-template-rows: 2fr;
   align-items: center;
 
-  @include after-pos-init;
-  @include hover-after-op;
-  
-  &::after {
-    @include after-elem-op;
-    display: grid;
+  transition: 250ms;
+
+  &:hover {
     grid-template-columns: 1fr 2.5em 20%;
+
+    &:last-child {
+      transform: rotate(2turn);
+    }
   }
+  
 
   &__title {
     font-size: 1em;
@@ -62,19 +64,8 @@
     color: $color-contrast;
     background-color: $color-tertiary;
     height: 100%;
-  }
 
-
-
-
-  &--reduce {
-    grid-template-columns: 1fr 2.5em 20%;
-
-    .fa-circle-check {
-
-      background-color: $color-tertiary;
-      height: 100%;
-
-    }
+    transform: rotate(0turn) ;
+    transition: transform 250ms ease-out;
   }
 }
