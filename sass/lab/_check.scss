@@ -1,10 +1,10 @@
 //TEST DANS MENU--LA-NOTE-ENCHANTEE
 
 .bg-menu--clip {
-//margin-top: -5em;
+  //margin-top: -5em;
 
   img {
-  //  clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0 100%);
+    //  clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0 100%);
   }
 }
 
@@ -27,17 +27,17 @@
   &:hover {
     grid-template-columns: 1fr 2.5em 20%;
 
-    &:last-child {
+    .fa-circle-check {
       transform: rotate(2turn);
     }
   }
-  
+
 
   &__title {
     font-size: 1em;
     padding-top: 0.5em;
   }
-  
+
 
   &__subtitle {
     grid-row-start: 2;
@@ -56,16 +56,17 @@
     padding-bottom: 0.5em;
   }
 
-  .fa-circle-check {
+  &__check {
+    height: 100%;
     grid-row: 1 / span 2;
+    background-color: $color-tertiary;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $color-contrast;
-    background-color: $color-tertiary;
-    height: 100%;
 
-    transform: rotate(0turn) ;
-    transition: transform 250ms ease-out;
+    .fa-circle-check {
+      color: $color-contrast;
+      transition: transform 250ms ease-out;
+    }
   }
 }

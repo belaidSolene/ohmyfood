@@ -384,7 +384,7 @@ footer ul li {
 .menu__plat__card--grid:hover {
   grid-template-columns: 1fr 2.5em 20%;
 }
-.menu__plat__card--grid:hover:last-child {
+.menu__plat__card--grid:hover .fa-circle-check {
   transform: rotate(2turn);
 }
 .menu__plat__card--grid__title {
@@ -405,15 +405,16 @@ footer ul li {
   grid-area: 2;
   padding-bottom: 0.5em;
 }
-.menu__plat__card--grid .fa-circle-check {
+.menu__plat__card--grid__check {
+  height: 100%;
   grid-row: 1/span 2;
+  background-color: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.menu__plat__card--grid__check .fa-circle-check {
   color: #FFF;
-  background-color: #99E2D0;
-  height: 100%;
-  transform: rotate(0turn);
   transition: transform 250ms ease-out;
 }
 
