@@ -1,0 +1,63 @@
+@keyframes apparition-plat {
+    from {
+        transform: translateY(25%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-btn {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-menu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.menu {
+    &__head--apparition {
+        animation: 522.493ms ease-in-out 0ms 1 normal both running apparition-menu;
+    }
+
+
+    &__plat--apparition {
+        animation: 645.434ms ease-in-out 0ms 1 normal both running apparition-plat;
+
+        &--1 {
+            animation-delay: 0;
+        }
+
+        &--2 {
+            animation-delay: 98.23448755190829ms;
+        }
+
+        &--3 {
+            animation-delay: 180.79315435687883ms;
+
+
+            +.btn {
+                animation: 462.428ms ease-in-out 571.315ms 1 normal both running apparition-btn;
+            }
+        }
+    }
+}

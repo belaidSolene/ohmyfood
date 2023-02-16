@@ -320,6 +320,54 @@ footer ul li {
   margin: 1em auto;
 }
 
+@keyframes apparition-plat {
+  from {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes apparition-btn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menu__head--apparition {
+  animation: 522.493ms ease-in-out 0ms 1 normal both running apparition-menu;
+}
+.menu__plat--apparition {
+  animation: 645.434ms ease-in-out 0ms 1 normal both running apparition-plat;
+}
+.menu__plat--apparition--1 {
+  animation-delay: 0;
+}
+.menu__plat--apparition--2 {
+  animation-delay: 98.2344875519ms;
+}
+.menu__plat--apparition--3 {
+  animation-delay: 180.7931543569ms;
+}
+.menu__plat--apparition--3 + .btn {
+  animation: 462.428ms ease-in-out 571.315ms 1 normal both running apparition-btn;
+}
+
 .menu__plat__card--grid {
   width: 100%;
   background-color: #FFF;
@@ -385,21 +433,76 @@ footer ul li {
   height: 100%;
 }
 
-.fa-gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+.menu--heart {
+  height: 20em;
+}
+.menu--heart .fa-heart {
+  font-size: 3em;
+}
+
+.simple-heart:hover {
+  background-image: -webkit-linear-gradient(#9356DC, #FF79DA);
   background-clip: padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.64em;
-  position: relative;
-  bottom: 30px;
-  left: 87.8%;
-  transform: scaleX(0);
-  transform-origin: center bottom;
-  transition: transform 250ms;
+  font-weight: bold;
 }
-.fa-gradient:hover {
-  transform: scaleX(1);
+
+.after-heart {
+  position: relative;
+  z-index: 1;
+}
+.after-heart:hover::after {
+  opacity: 1;
+}
+.after-heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  background-image: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.heart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.heart__default {
+  transition: opacity 130ms ease-in-out 177ms, transform 83ms ease-in-out 240ms;
+}
+.heart__hover {
+  background-image: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 250ms ease-in-out 0ms, transform 287ms ease-in-out 0ms;
+  transform: scale(0.3);
+  opacity: 0;
+}
+.heart:hover .heart__hover {
+  transform: scale(1);
+  opacity: 1;
+}
+.heart:hover .heart__default {
+  transform: scale(0.5);
+  opacity: 0;
 }
 
 .bg-img {

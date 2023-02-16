@@ -1,20 +1,80 @@
 //TEST DANS MENU-A-LA-FRANCAISE
 
-.fa-gradient {
-    background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
-	background-clip: padding-box;
-    -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-    font-size: 1.64em;
+.menu--heart {
+    height: 20em;
 
-    position: relative;
-    bottom: 30px;
-    left: 87.8%;
-    transform: scaleX(0);
-    transform-origin: center bottom;
-    transition: transform 250ms;
-    
+    .fa-heart {
+        font-size: 3em;
+    }
+}
+
+
+.simple-heart {
     &:hover {
-        transform: scaleX(1);        
+        background-image: -webkit-linear-gradient($color-primary, $color-secondary);
+        background-clip: padding-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
+}
+
+
+.after-heart {
+    @include after-pos-init;
+    @include hover-after-op;
+
+
+    &::after {
+        @include after-elem-op;
+        background-image: -webkit-linear-gradient($color-primary, $color-secondary);
+        background-clip: padding-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
+}
+
+.heart {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+    }
+
+    
+    &__default {
+       transition: opacity 130ms ease-in-out 177ms, transform 83ms ease-in-out 240ms;
+    }
+
+    &__hover {
+        background-image: -webkit-linear-gradient($color-primary, $color-secondary);
+        background-clip: padding-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+        transition: opacity 250ms ease-in-out 0ms, transform 287ms ease-in-out 0ms;
+        transform: scale(.3);
+        opacity: 0;
+    }
+
+    &:hover {
+        .heart__hover {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .heart__default {
+            transform: scale(0.5);
+            opacity: 0;
+        }
     }
 }
