@@ -15,16 +15,42 @@
     }
 
     &__card {
-        width: 100%;
+        @include card-init;
         height: 16.4em;
         border-radius: 1.28em;
-        overflow: hidden;
-        background-color: $color-contrast;
+        line-height: 1.6em;
 
         img {
             height: 75%;
             width: 100%;
             object-fit: cover;
+        }
+
+        &__desc {
+            padding: 0 1em;
+            @include display-grid(1fr 1em);
+
+
+            &__title {
+            font-size: 1.2em;
+                font-weight: 900;
+            }
+
+
+            &__subtitle {
+                font-size: 1.07em;
+                font-weight: 300;
+
+                grid-row-start: 2;
+                //padding-bottom: 0.5em;
+            }
+
+            &__heart {
+                grid-row: 1 / span 2;
+              //  display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
 
         &__encart-new {

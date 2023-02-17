@@ -18,7 +18,7 @@
         }
 
         .fa-heart {
-            font-size: 1.64em;
+            font-size: $fa-size;
         }
     }
 
@@ -39,14 +39,6 @@
                 padding-bottom: 0.25em;
                 border-bottom: 0.23em solid $color-tertiary;
             }
-        }
-
-        &__card {
-            width: 100%;
-            background-color: $color-contrast;
-            border-radius: 0.9em;
-            margin: 0 1em;
-            @include shadow();
         }
     }
 

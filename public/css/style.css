@@ -110,6 +110,57 @@ footer h3 {
   align-self: flex-end;
 }
 
+.card-menu {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 0.9em;
+  padding-left: 0.8em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 1fr 2.5em 0%;
+  grid-template-rows: 2fr;
+  align-items: center;
+  transition: 280ms ease-in-out;
+}
+.card-menu:hover {
+  grid-template-columns: 1fr 2.5em 20%;
+}
+.card-menu:hover .fa-circle-check {
+  transform: rotate(1turn);
+}
+.card-menu__title {
+  font-size: 1em;
+  padding-top: 0.5em;
+}
+.card-menu__subtitle {
+  grid-row-start: 2;
+  font-size: 0.84em;
+  padding-bottom: 0.5em;
+}
+.card-menu--ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-menu__price {
+  grid-area: 2;
+  padding-bottom: 0.5em;
+}
+.card-menu__check {
+  height: 100%;
+  grid-row: 1/span 2;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-menu__check .fa-circle-check {
+  color: #FFF;
+  font-size: 1.64em;
+  transition: transform 280ms ease-in-out;
+}
+
 .bg-menu img {
   width: 100%;
   object-fit: cover;
@@ -249,15 +300,37 @@ footer ul li {
 }
 .resto__card {
   width: 100%;
-  height: 16.4em;
-  border-radius: 1.28em;
   overflow: hidden;
   background-color: #FFF;
+  height: 16.4em;
+  border-radius: 1.28em;
+  line-height: 1.6em;
 }
 .resto__card img {
   height: 75%;
   width: 100%;
   object-fit: cover;
+}
+.resto__card__desc {
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: 1fr 1em;
+  grid-template-rows: 2fr;
+  align-items: center;
+}
+.resto__card__desc__title {
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.resto__card__desc__subtitle {
+  font-size: 1.07em;
+  font-weight: 300;
+  grid-row-start: 2;
+}
+.resto__card__desc__heart {
+  grid-row: 1/span 2;
+  justify-content: center;
+  align-items: center;
 }
 .resto__card__encart-new {
   display: inline-block;
@@ -309,13 +382,6 @@ footer ul li {
   padding-bottom: 0.25em;
   border-bottom: 0.23em solid #99E2D0;
 }
-.menu__plat__card {
-  width: 100%;
-  background-color: #FFF;
-  border-radius: 0.9em;
-  margin: 0 1em;
-  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
-}
 .menu .btn {
   margin: 1em auto;
 }
@@ -366,56 +432,6 @@ footer ul li {
 }
 .menu__plat--apparition--3 + .btn {
   animation: 462.428ms ease-in-out 571.315ms 1 normal both running apparition-btn;
-}
-
-.menu__plat__card--grid {
-  width: 100%;
-  background-color: #FFF;
-  overflow: hidden;
-  border-radius: 0.9em;
-  padding-left: 0.8em;
-  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
-  display: grid;
-  grid-template-columns: 1fr 2.5em 0%;
-  grid-template-rows: 2fr;
-  align-items: center;
-  transition: 250ms;
-}
-.menu__plat__card--grid:hover {
-  grid-template-columns: 1fr 2.5em 20%;
-}
-.menu__plat__card--grid:hover .fa-circle-check {
-  transform: rotate(2turn);
-}
-.menu__plat__card--grid__title {
-  font-size: 1em;
-  padding-top: 0.5em;
-}
-.menu__plat__card--grid__subtitle {
-  grid-row-start: 2;
-  font-size: 0.84em;
-  padding-bottom: 0.5em;
-}
-.menu__plat__card--grid--ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu__plat__card--grid__price {
-  grid-area: 2;
-  padding-bottom: 0.5em;
-}
-.menu__plat__card--grid__check {
-  height: 100%;
-  grid-row: 1/span 2;
-  background-color: #99E2D0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu__plat__card--grid__check .fa-circle-check {
-  color: #FFF;
-  transition: transform 250ms ease-out;
 }
 
 .menu--heart {

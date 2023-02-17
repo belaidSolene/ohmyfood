@@ -3,3 +3,13 @@
     background-image: url("../img/restaurants/la-note-enchantee.jpg");
     background-size: cover;
 }
+
+//TEST DANS MENU--LA-PALETTE-DU-GOUT
+
+.bg-menu--clip {
+    //margin-top: -5em;
+  
+    img {
+      //  clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0 100%);
+    }
+  }
