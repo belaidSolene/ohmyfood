@@ -1,0 +1,57 @@
+.card-menu {
+  @include card-init;
+  border-radius: 0.9em;
+  padding-left: 0.8em;
+  @include shadow();
+
+  @include display-grid(1fr 2.5em 0%);
+  transition: 280ms ease-in-out;
+
+  &:hover {
+    grid-template-columns: 1fr 2.5em 20%;
+
+    .fa-circle-check {
+      transform: rotate(1turn);
+    }
+  }
+
+
+  &__title {
+    font-size: 1em;
+    padding-top: $pad-card-menu;
+  }
+
+
+  &__subtitle {
+    grid-row-start: 2;
+    font-size: 0.84em;
+    padding-bottom: $pad-card-menu;
+    padding-right: $pad-card-menu;
+  }
+
+  &--ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__price {
+    grid-area: 2;
+    padding-bottom: $pad-card-menu;
+  }
+
+  &__check {
+    height: 100%;
+    grid-row: 1 / span 2;
+    background-color: $color-tertiary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fa-circle-check {
+      color: $color-contrast;
+      font-size: $size-check;
+      transition: transform 280ms ease-in-out;
+    }
+  }
+}

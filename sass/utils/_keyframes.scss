@@ -1,0 +1,35 @@
+@keyframes apparition-menu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-plat {
+    from {
+        transform: translateY(25%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-btn {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

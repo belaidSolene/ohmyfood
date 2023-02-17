@@ -1,10 +1,33 @@
-/*
-    INDEX
-*/
-/*
-    MENU
-*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&family=Shrikhand&display=swap");
+@keyframes apparition-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes apparition-plat {
+  from {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes apparition-btn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *::after,
 *::before {
@@ -74,42 +97,87 @@ footer h3 {
   box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.5);
 }
 
-.card-desc {
-  padding: 6px 20px 0 15px;
+.heart {
+  position: relative;
+}
+.heart i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  font-size: 1.64em;
+}
+.heart__default {
+  transition: opacity 130ms ease-in-out 177ms, transform 83ms ease-in-out 240ms;
+}
+.heart__hover {
+  background-image: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 250ms ease-in-out 0ms, transform 287ms ease-in-out 0ms;
+  transform: scale(0.3);
+  opacity: 0;
+}
+.heart:hover .heart__hover {
+  transform: scale(1);
+  opacity: 1;
+}
+.heart:hover .heart__default {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.card-menu {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 0.9em;
+  padding-left: 0.8em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 1fr 2.5em 0%;
+  grid-template-rows: 2fr;
+  align-items: center;
+  transition: 280ms ease-in-out;
+}
+.card-menu:hover {
+  grid-template-columns: 1fr 2.5em 20%;
+}
+.card-menu:hover .fa-circle-check {
+  transform: rotate(1turn);
+}
+.card-menu__title {
+  font-size: 1em;
+  padding-top: 0.5em;
+}
+.card-menu__subtitle {
+  grid-row-start: 2;
+  font-size: 0.84em;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
+}
+.card-menu--ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-menu__price {
+  grid-area: 2;
+  padding-bottom: 0.5em;
+}
+.card-menu__check {
+  height: 100%;
+  grid-row: 1/span 2;
+  background-color: #99E2D0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
-.card-desc__txt {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.6em;
-}
-.card-desc__txt__title {
-  font-weight: 900;
-}
-.card-desc__txt__title + p {
-  font-weight: 300;
-}
-.card-desc__txt h5 {
-  font-size: 1.2em;
-}
-.card-desc__txt h5 + p {
-  font-size: 1.07em;
-}
-.card-desc__txt h3 {
-  font-size: 1em;
-}
-.card-desc__txt h3 + p {
-  font-size: 0.84em;
-}
-.card-desc .fa-heart {
-  font-size: 1.67em;
-}
-.card-desc__price {
-  font-size: 0.87em;
-  padding: 0 0 0.4em;
-  align-self: flex-end;
+.card-menu__check .fa-circle-check {
+  color: #FFF;
+  font-size: 1.4em;
+  transition: transform 280ms ease-in-out;
 }
 
 .bg-menu img {
@@ -251,15 +319,37 @@ footer ul li {
 }
 .resto__card {
   width: 100%;
-  height: 16.4em;
-  border-radius: 1.28em;
   overflow: hidden;
   background-color: #FFF;
+  height: 16.4em;
+  border-radius: 1.28em;
+  line-height: 1.6em;
 }
 .resto__card img {
   height: 75%;
   width: 100%;
   object-fit: cover;
+}
+.resto__card__desc {
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: 1fr 2em;
+  grid-template-rows: 2fr;
+  align-items: center;
+}
+.resto__card__desc__title {
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.resto__card__desc__subtitle {
+  font-size: 1.07em;
+  font-weight: 300;
+  grid-row-start: 2;
+}
+.resto__card__desc__heart {
+  grid-row: 1/span 2;
+  justify-content: center;
+  align-items: center;
 }
 .resto__card__encart-new {
   display: inline-block;
@@ -270,7 +360,7 @@ footer ul li {
   padding: 0.5em 0.8em;
   position: relative;
   bottom: 15.3em;
-  left: 12em;
+  left: 63%;
 }
 
 .menu {
@@ -282,17 +372,15 @@ footer ul li {
   margin-bottom: -3em;
 }
 .menu__head {
-  padding: 1.5em 1em 0 0;
+  padding: 1.5em 2.8em 0 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  animation: 522.493ms ease-in-out 0ms 1 normal both running apparition-menu;
 }
 .menu__head h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
-}
-.menu__head .fa-heart {
-  font-size: 1.64em;
 }
 .menu__plat {
   padding: 1.5em 0 1em;
@@ -300,6 +388,19 @@ footer ul li {
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  animation: 645.434ms ease-in-out 0ms 1 normal both running apparition-plat;
+}
+.menu__plat--1 {
+  animation-delay: 0;
+}
+.menu__plat--2 {
+  animation-delay: 98.2344875519ms;
+}
+.menu__plat--3 {
+  animation-delay: 180.7931543569ms;
+}
+.menu__plat--3 + .btn {
+  animation: 462.428ms ease-in-out 571.315ms 1 normal both running apparition-btn;
 }
 .menu__plat h2 {
   align-self: flex-start;
@@ -311,15 +412,67 @@ footer ul li {
   padding-bottom: 0.25em;
   border-bottom: 0.23em solid #99E2D0;
 }
-.menu__plat__card {
-  width: 100%;
-  background-color: #FFF;
-  border-radius: 0.9em;
-  margin: 0 1em;
-  box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.3);
-}
 .menu .btn {
   margin: 1em auto;
+}
+
+.menu--heart {
+  height: 20em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+.menu--heart .fa-heart {
+  font-size: 3em;
+}
+
+.simple-heart:hover {
+  background-image: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.after-heart {
+  position: relative;
+  z-index: 1;
+}
+.after-heart:hover::after {
+  opacity: 1;
+}
+.after-heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  background-image: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.menu--heart__orig .heart__hover {
+  transform-origin: center bottom;
+}
+
+.bg-img {
+  height: 15em;
+  background-image: url("../img/restaurants/la-note-enchantee.jpg");
+  background-size: cover;
+}
+
+.bg-clip {
+  margin-top: -5em;
+}
+.bg-clip img {
+  clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
