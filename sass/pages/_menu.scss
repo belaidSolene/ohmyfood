@@ -7,18 +7,16 @@
     margin-bottom: $position-menu;
 
     &__head {
-        padding: 1.5em 1em 0 0;
+        padding: 1.5em 2.8em 0 0;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+
+        animation: 522.493ms ease-in-out 0ms 1 normal both running apparition-menu;
 
         h1 {
             font-family: $font-logo;
             font-weight: 400;
-        }
-
-        .fa-heart {
-            font-size: $fa-size;
         }
     }
 
@@ -28,6 +26,25 @@
         flex-direction: column;
         align-items: center;
         gap: 1em;
+        
+        animation: 645.434ms ease-in-out 0ms 1 normal both running apparition-plat;
+
+        &--1 {
+            animation-delay: 0;
+        }
+
+        &--2 {
+            animation-delay: 98.23448755190829ms;
+        }
+
+        &--3 {
+            animation-delay: 180.79315435687883ms;
+
+
+            +.btn {
+                animation: 462.428ms ease-in-out 571.315ms 1 normal both running apparition-btn;
+            }
+        }
 
         h2 {
             align-self: flex-start;

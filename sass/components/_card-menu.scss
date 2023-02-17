@@ -18,14 +18,15 @@
 
   &__title {
     font-size: 1em;
-    padding-top: 0.5em;
+    padding-top: $pad-card-menu;
   }
 
 
   &__subtitle {
     grid-row-start: 2;
     font-size: 0.84em;
-    padding-bottom: 0.5em;
+    padding-bottom: $pad-card-menu;
+    padding-right: $pad-card-menu;
   }
 
   &--ellipsis {
@@ -36,7 +37,7 @@
 
   &__price {
     grid-area: 2;
-    padding-bottom: 0.5em;
+    padding-bottom: $pad-card-menu;
   }
 
   &__check {
@@ -49,7 +50,7 @@
 
     .fa-circle-check {
       color: $color-contrast;
-      font-size: $fa-size;
+      font-size: $size-check;
       transition: transform 280ms ease-in-out;
     }
   }

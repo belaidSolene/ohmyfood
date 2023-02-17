@@ -1,4 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&family=Shrikhand&display=swap");
+@keyframes apparition-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes apparition-plat {
+  from {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes apparition-btn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *::after,
 *::before {
@@ -68,46 +97,35 @@ footer h3 {
   box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.5);
 }
 
-.card-desc {
-  padding: 6px 20px 0 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.heart {
+  position: relative;
 }
-.card-desc__txt {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.6em;
+.heart i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  font-size: 1.64em;
 }
-.card-desc__txt__title {
-  font-weight: 900;
+.heart__default {
+  transition: opacity 130ms ease-in-out 177ms, transform 83ms ease-in-out 240ms;
 }
-.card-desc__txt__title + p {
-  font-weight: 300;
+.heart__hover {
+  background-image: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 250ms ease-in-out 0ms, transform 287ms ease-in-out 0ms;
+  transform: scale(0.3);
+  opacity: 0;
 }
-.card-desc__txt h5 {
-  font-size: 1.2em;
+.heart:hover .heart__hover {
+  transform: scale(1);
+  opacity: 1;
 }
-.card-desc__txt h5 + p {
-  font-size: 1.07em;
-}
-.card-desc__txt h3 {
-  font-size: 1em;
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.card-desc__txt h3 + p {
-  font-size: 0.84em;
-}
-.card-desc .fa-heart {
-  font-size: 1.67em;
-}
-.card-desc__price {
-  font-size: 0.87em;
-  padding: 0 0 0.4em;
-  align-self: flex-end;
+.heart:hover .heart__default {
+  transform: scale(0.5);
+  opacity: 0;
 }
 
 .card-menu {
@@ -137,6 +155,7 @@ footer h3 {
   grid-row-start: 2;
   font-size: 0.84em;
   padding-bottom: 0.5em;
+  padding-right: 0.5em;
 }
 .card-menu--ellipsis {
   white-space: nowrap;
@@ -157,7 +176,7 @@ footer h3 {
 }
 .card-menu__check .fa-circle-check {
   color: #FFF;
-  font-size: 1.64em;
+  font-size: 1.4em;
   transition: transform 280ms ease-in-out;
 }
 
@@ -314,7 +333,7 @@ footer ul li {
 .resto__card__desc {
   padding: 0 1em;
   display: grid;
-  grid-template-columns: 1fr 1em;
+  grid-template-columns: 1fr 2em;
   grid-template-rows: 2fr;
   align-items: center;
 }
@@ -353,17 +372,15 @@ footer ul li {
   margin-bottom: -3em;
 }
 .menu__head {
-  padding: 1.5em 1em 0 0;
+  padding: 1.5em 2.8em 0 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  animation: 522.493ms ease-in-out 0ms 1 normal both running apparition-menu;
 }
 .menu__head h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
-}
-.menu__head .fa-heart {
-  font-size: 1.64em;
 }
 .menu__plat {
   padding: 1.5em 0 1em;
@@ -371,6 +388,19 @@ footer ul li {
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  animation: 645.434ms ease-in-out 0ms 1 normal both running apparition-plat;
+}
+.menu__plat--1 {
+  animation-delay: 0;
+}
+.menu__plat--2 {
+  animation-delay: 98.2344875519ms;
+}
+.menu__plat--3 {
+  animation-delay: 180.7931543569ms;
+}
+.menu__plat--3 + .btn {
+  animation: 462.428ms ease-in-out 571.315ms 1 normal both running apparition-btn;
 }
 .menu__plat h2 {
   align-self: flex-start;
@@ -384,61 +414,6 @@ footer ul li {
 }
 .menu .btn {
   margin: 1em auto;
-}
-
-@keyframes apparition-plat {
-  from {
-    transform: translateY(25%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes apparition-btn {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes apparition-menu {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.menu__head--apparition {
-  animation: 522.493ms ease-in-out 0ms 1 normal both running apparition-menu;
-}
-.menu__plat--apparition {
-  animation: 645.434ms ease-in-out 0ms 1 normal both running apparition-plat;
-}
-.menu__plat--apparition--1 {
-  animation-delay: 0;
-}
-.menu__plat--apparition--2 {
-  animation-delay: 98.2344875519ms;
-}
-.menu__plat--apparition--3 {
-  animation-delay: 180.7931543569ms;
-}
-.menu__plat--apparition--3 + .btn {
-  animation: 462.428ms ease-in-out 571.315ms 1 normal both running apparition-btn;
-}
-
-.menu--heart {
-  height: 20em;
-}
-.menu--heart .fa-heart {
-  font-size: 3em;
 }
 
 .simple-heart:hover {
@@ -471,39 +446,6 @@ footer ul li {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-}
-
-.heart {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.heart i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-}
-.heart__default {
-  transition: opacity 130ms ease-in-out 177ms, transform 83ms ease-in-out 240ms;
-}
-.heart__hover {
-  background-image: -webkit-linear-gradient(#9356DC, #FF79DA);
-  background-clip: padding-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 250ms ease-in-out 0ms, transform 287ms ease-in-out 0ms;
-  transform: scale(0.3);
-  opacity: 0;
-}
-.heart:hover .heart__hover {
-  transform: scale(1);
-  opacity: 1;
-}
-.heart:hover .heart__default {
-  transform: scale(0.5);
-  opacity: 0;
 }
 
 .bg-img {

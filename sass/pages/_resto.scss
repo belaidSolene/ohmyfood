@@ -28,7 +28,7 @@
 
         &__desc {
             padding: 0 1em;
-            @include display-grid(1fr 1em);
+            @include display-grid(1fr 2em);
 
 
             &__title {

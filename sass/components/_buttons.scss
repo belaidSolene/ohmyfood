@@ -7,6 +7,7 @@
     padding: 1em;
     cursor: pointer;
     text-align: center;
+    
     @include after-pos-init;
     @include hover-after-op;
 

@@ -9,16 +9,20 @@ $color-bg: #F0F0F0;
 
 //bouton
 $btn-border-radius: 1.2em;
+//hoover paramètres
 $btn-amount-change-hoover : 5;
 $btn-light-clr-prim : lighten($color-primary, $btn-amount-change-hoover);
 $btn-light-clr-secon : lighten($color-secondary, $btn-amount-change-hoover);
 
-//taille coeur & check
-$fa-size : 1.64em;
+//padding card-menu title, subtitle, price
+$pad-card-menu : 0.5em;
 
-//
-//   INDEX
-//
+//taille coeur & check
+$size-heart : 1.64em;
+$size-check : 1.4em;
+
+
+//INDEX
 //valeur ombre/rectangle gris foncé au-dessus localisation
 $height-rect : 0.3em;
 $shadow-header: 0 $height-rect;
@@ -26,8 +30,8 @@ $shadow-header: 0 $height-rect;
 //regle__etape
 $etp-border-radius : 1.1em;
 
-//
-//    MENU
-//
+    
+//MENU
 //valeur superposition menu sur bg-menu
 $position-menu: -3em;
+
