@@ -1,10 +1,13 @@
-//TEST DANS MENU-A-LA-FRANCAISE
+//TEST DANS heart-filled
 
 .menu--heart {
-   // height: 20em;
+    height: 20em;
+    padding: 1em;
 
+    display: flex;
+    justify-content: space-around;
     .fa-heart {
-       // font-size: $fa-size ;
+        font-size: 3em;
     }
 }
 
@@ -32,5 +35,11 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
+    }
+}
+
+.menu--heart__orig {
+    .heart__hover {
+        transform-origin: center bottom;
     }
 }

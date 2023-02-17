@@ -416,6 +416,16 @@ footer ul li {
   margin: 1em auto;
 }
 
+.menu--heart {
+  height: 20em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+.menu--heart .fa-heart {
+  font-size: 3em;
+}
+
 .simple-heart:hover {
   background-image: -webkit-linear-gradient(#9356DC, #FF79DA);
   background-clip: padding-box;
@@ -448,10 +458,21 @@ footer ul li {
   font-weight: bold;
 }
 
+.menu--heart__orig .heart__hover {
+  transform-origin: center bottom;
+}
+
 .bg-img {
   height: 15em;
   background-image: url("../img/restaurants/la-note-enchantee.jpg");
   background-size: cover;
+}
+
+.bg-clip {
+  margin-top: -5em;
+}
+.bg-clip img {
+  clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
