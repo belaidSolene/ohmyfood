@@ -8,6 +8,10 @@ footer {
         padding: 15px 0;
         li {
             padding: 15px 0 0;
+
+            a {
+                color: $color-contrast;
+            }
         }
     }
 }
