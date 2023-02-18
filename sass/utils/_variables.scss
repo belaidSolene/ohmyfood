@@ -32,6 +32,14 @@ $etp-border-radius : 1.1em;
 
     
 //MENU
+// map pour bg-menu
+$menu-bg: (
+    "a-la-francaise" : "../img/restaurants/a-la-francaise.jpg",
+    "la-note-enchantee" : "../img/restaurants/la-note-enchantee.jpg",
+    "la-palette-du-gout" : "../img/restaurants/la-palette-du-gout.jpg",
+    "le-delice-des-sens" : "../img/restaurants/le-delice-des-sens.jpg"
+);
+
 //valeur superposition menu sur bg-menu
 $position-menu: -3em;
 

@@ -42,14 +42,10 @@
                 font-weight: 300;
 
                 grid-row-start: 2;
-                //padding-bottom: 0.5em;
             }
 
             &__heart {
                 grid-row: 1 / span 2;
-              //  display: flex;
-                justify-content: center;
-                align-items: center;
             }
         }
 
@@ -60,9 +56,10 @@
             color: darken($color: $color-tertiary, $amount: 30);
             font-weight: 500;
             padding: 0.5em 0.8em;
+            align-self: flex-end;
             position: relative;
             bottom: 15.3em;
-            left: 63%;
+            right: 1em;
         }
     }
 }

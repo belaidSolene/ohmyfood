@@ -1,3 +1,25 @@
+.bg-menu {
+    background-size: cover;
+    width: 100%;
+    height: 20em;
+
+    &--a-la-francaise {
+        @include bg-image("a-la-francaise");
+    }
+
+    &--la-note-enchantee {
+        @include bg-image("la-note-enchantee");
+    }
+
+    &--la-palette-du-gout {
+        @include bg-image("la-palette-du-gout");
+    }
+
+    &--le-delice-des-sens {
+        @include bg-image("le-delice-des-sens");
+    }
+}
+
 .menu {
     background-color: $color-bg;
     border-radius: 2.5em 2.5em 0 0;
@@ -26,7 +48,7 @@
         flex-direction: column;
         align-items: center;
         gap: 1em;
-        
+
         animation: 645.434ms ease-in-out 0ms 1 normal both running apparition-plat;
 
         &--1 {

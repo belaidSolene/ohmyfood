@@ -15,6 +15,10 @@
        align-items: center;
 }
 
+@mixin bg-image($nom-restau) {
+       background-image: url(map-get($menu-bg, $nom-restau));
+     }
+
 @mixin after-elem-op() {
        content: "";
        position: absolute;
