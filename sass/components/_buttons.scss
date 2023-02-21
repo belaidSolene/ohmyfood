@@ -7,12 +7,26 @@
     padding: 1em;
     cursor: pointer;
     text-align: center;
-    
-    @include after-pos-init;
-    @include hover-after-op;
+
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
 
     &::after {
-        @include after-elem-op;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
         border-radius: $btn-border-radius;
         background: linear-gradient($btn-light-clr-secon, $btn-light-clr-prim);
         @include shadow($btn-amount-change-hoover*0.1);

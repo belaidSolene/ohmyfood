@@ -1,20 +1,40 @@
 .regle {
-    padding: 1.7em 0.2em 1.5em 1.2em;
+    padding: 1.5em 1em 1.5em 0;
+
+    @include computer-only {
+        padding-left: 1em;
+    }
+
+    h4 {
+        margin-left: 1em;
+    }
 
     &__box {
+        margin: 1.7em 0 0;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
         align-items: center;
+        gap: 1.2em;
+
+        @include computer-only {
+            flex-direction: row;
+        }
 
         &__etape {
-            width: 80%;
-            background-color: $color-bg;
             display: flex;
-            align-items: baseline;
-            border-radius: $etp-border-radius;
-            padding: 1.17em;
-            margin: 0.7em 0;
-            @include shadow;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            @include tablet-only {
+                width: 77%;
+            }
+
+            @include computer-only {
+                width: 27%;
+                flex-direction: column;
+            }
 
             &__num {
                 display: flex;
@@ -23,30 +43,77 @@
                 background-color: $color-primary;
                 color: $color-contrast;
                 font-size: 0.7em;
-                height: 2em;
-                width: 2em;
+                height: 2.2em;
+                width: 2.2em;
                 border-radius: 50%;
                 position: relative;
-                right: 35px;
+                left: 1em;
+
+                @include tablet-only {
+                    height: 2.3em;
+                    width: 2.3em;
+                    font-size: 0.9em;
+                }
+
+                @include computer-only {
+                    top: 0.8em;
+                    left: 0;
+
+                }
             }
 
-            .fa-solid {
-                color: $color-bg-footer;
-                font-size: 19px;
-            }
+            &__content {
+                width: 100%;
+                max-width: 398px;
+                background-color: $color-bg;
+                border-radius: $etp-border-radius;
+                @include shadow;
+                padding: 1.17em;
 
+                display: flex;
+                align-items: center;
 
-            &__txt {
-                font-size: 0.86em;
-                font-weight: bold;
-                padding: 0 25px 0 15px;
-            }
-
-            &--accent {
-                background: lighten($color: $color-primary, $amount: 35);
+                @include computer-only {
+                    max-width: 700px;
+                }
 
                 .fa-solid {
-                    color: $color-primary;
+                    position: relative;
+                    left: 0.7em;
+                    color: $color-bg-footer;
+                    font-size: 1.2em;
+
+                    @include tablet-only {
+                        font-size: 1.2em;
+                    }
+
+                    @include computer-only {
+                        font-size: 1.4em;
+                        position: static;
+                    }
+                }
+
+                &__txt {
+                    margin-left: 2.5em;
+                    font-size: 0.86em;
+                    font-weight: bold;
+
+                    @include tablet-only {
+                        font-size: 1em;
+                    }
+
+                    @include computer-only {
+                        margin-left: 1em;
+                        font-size: 1.2em;
+                    }
+                }
+
+                &--accent {
+                    background: lighten($color: $color-primary, $amount: 35);
+
+                    .fa-solid {
+                        color: $color-primary;
+                    }
                 }
             }
         }

@@ -23,12 +23,25 @@
 
 
 .after-heart {
-    @include after-pos-init;
-    @include hover-after-op;
+    position: relative;
+    z-index: 1;
 
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
 
     &::after {
-        @include after-elem-op;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
         background-image: -webkit-linear-gradient($color-primary, $color-secondary);
         background-clip: padding-box;
         -webkit-background-clip: text;

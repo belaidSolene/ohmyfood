@@ -2,50 +2,75 @@
     background-color: $color-bg;
     padding: 3.4em 0.9em 4em;
     margin: 1.5em 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1.3em;
-
-    a {
-        width: 100%;
+    
+    &__box {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-    }
-
-    &__card {
-        @include card-init;
-        height: 16.4em;
-        border-radius: 1.28em;
-        line-height: 1.6em;
-
-        img {
-            height: 75%;
+        gap: 1.3em;
+    
+        a {
             width: 100%;
-            object-fit: cover;
+            max-width: 455px;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include tablet-only {
+                width: 46%;
+             //   max-width: 399px;
+            }
+
+            @include computer-only {
+                width: 23%;
+            }
         }
+    
+        &__card {
+            height: 16.4em;
+            @include card-init;
+           
+            border-radius: 1.28em;
+            line-height: 1.6em;
 
-        &__desc {
-            padding: 0 1em;
-            @include display-grid(1fr 2em);
+           @include computer-only {
+            height: 24em;
+           }
+    
+            img {
+                min-height: 12.5em;
+                height: 75%;
+                width: 100%;
+                object-fit: cover;
 
-
-            &__title {
-            font-size: 1.2em;
-                font-weight: 900;
+                @include computer-only {
+                    height: 82%;
+                }
             }
-
-
-            &__subtitle {
-                font-size: 1.07em;
-                font-weight: 300;
-
-                grid-row-start: 2;
-            }
-
-            &__heart {
-                grid-row: 1 / span 2;
+    
+            &__desc {
+                padding: 0 1em;
+                @include display-grid(1fr 2em);
+    
+    
+                &__title {
+                font-size: 1.2em;
+                    font-weight: 900;
+                }
+    
+    
+                &__subtitle {
+                    font-size: 1.07em;
+                    font-weight: 300;
+    
+                    grid-row-start: 2;
+                }
+    
+                &__heart {
+                    grid-row: 1 / span 2;
+                }
             }
         }
 
@@ -58,8 +83,10 @@
             padding: 0.5em 0.8em;
             align-self: flex-end;
             position: relative;
-            bottom: 15.3em;
+            top: 3em;
             right: 1em;
+            margin-top: -2.2em;
         }
     }
+   
 }

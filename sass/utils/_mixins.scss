@@ -17,35 +17,16 @@
 
 @mixin bg-image($nom-restau) {
        background-image: url(map-get($menu-bg, $nom-restau));
-     }
-
-@mixin after-elem-op() {
-       content: "";
-       position: absolute;
-       top: 0;
-       bottom: 0;
-       left: 0;
-       right: 0;
-       opacity: 0;
-       z-index: -1;
-       transition: opacity 250ms;
 }
 
-@mixin after-pos-init() {
-       position: relative;
-       z-index: 1;
-}
-
-@mixin hover-after-op ($bool : false) {
-       &:hover {
-              &::after {
-                     opacity: 1;
-              }
+@mixin tablet-only {
+       @media screen and (min-width : map-get($breakpoints, tablet)){
+              @content;
        }
+}
 
-       @if ($bool ==1) {
-              .menu__plat__card__check {
-                     opacity: 1;
-              }
+@mixin computer-only {
+       @media screen and (min-width : map-get($breakpoints, computer)){
+              @content;
        }
 }

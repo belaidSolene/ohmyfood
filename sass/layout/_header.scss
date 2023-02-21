@@ -2,12 +2,20 @@ header {
     width: 100%;
     margin: 0.7em 0 $height-rect;
     padding: 0.9em 0;
+
+    @include computer-only {
+        margin: 1em;
+    }
 }
 
 .head__page {
     &-index {
         text-align: center;
         @include shadow(0.25, $shadow-header);
+
+        @include computer-only {
+            box-shadow: none;
+        }
     }
 
     &-menu {
