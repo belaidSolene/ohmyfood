@@ -1,5 +1,6 @@
 .card-menu {
   @include card-init;
+  width: 98%;
   border-radius: 0.9em;
   padding-left: 0.8em;
   @include shadow();
@@ -15,6 +16,15 @@
     }
   }
 
+  @include tablet-only {
+    min-width: 13em;
+    width: 45%;
+  }
+
+  @include computer-only {
+    min-width: 18em;
+    width: 90%;
+  }
 
   &__title {
     font-size: 1em;
