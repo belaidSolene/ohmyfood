@@ -2,10 +2,6 @@ header {
     width: 100%;
     margin: 0.7em 0 $height-rect;
     padding: 0.9em 0;
-
-    @include computer-only {
-        margin: 1em;
-    }
 }
 
 .head__page {

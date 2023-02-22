@@ -1,0 +1,30 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loader-fadeout $animation-speed linear $loader-delay forwards;
+
+    &__spinner {
+        width: $loader-size;
+        height: $loader-size;
+        border-radius: 50%;
+        border: 4px solid $loader-color;
+        border-top-color: transparent;
+        animation: spinner-run $animation-speed ease-in-out 3;
+    }
+}
+
+//affichage page
+.content {
+    opacity: 0;
+    animation: content-fadein $animation-speed linear $content-delay forwards;
+}
+
+
+

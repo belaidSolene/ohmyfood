@@ -19,14 +19,14 @@
        background-image: url(map-get($menu-bg, $nom-restau));
 }
 
-@mixin tablet-only {
-       @media screen and (min-width : map-get($breakpoints, tablet)){
+@mixin tablet {
+       @media screen and (min-width : map-get($breakpoints, tablet-size)){
               @content;
        }
 }
 
 @mixin computer-only {
-       @media screen and (min-width : map-get($breakpoints, computer)){
+       @media screen and (min-width : map-get($breakpoints, computer-size)){
               @content;
        }
 }

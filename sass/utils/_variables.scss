@@ -7,6 +7,14 @@ $color-contrast: #FFF;
 $color-bg-footer: #353535;
 $color-bg: #F0F0F0;
 
+// loader
+$loader-size: 3em; // Taille du spinner
+$loader-color: $color-tertiary; // Couleur du spinner
+$animation-speed: 1.5s; // Vitesse de l'animation
+
+$loader-delay : 1700ms;
+$content-delay : $loader-delay + 900ms;
+
 //bouton
 $btn-border-radius: 1.2em;
 //hoover paramètres
@@ -15,7 +23,7 @@ $btn-light-clr-prim : lighten($color-primary, $btn-amount-change-hoover);
 $btn-light-clr-secon : lighten($color-secondary, $btn-amount-change-hoover);
 
 //padding card-menu title, subtitle, price
-$pad-card-menu : 0.5em;
+$padd-card-menu : 0.5em;
 
 //taille coeur & check
 $size-heart : 1.64em;
@@ -46,6 +54,6 @@ $position-menu: -3em;
 
 //Responsif
 $breakpoints: (
-    tablet : 484px,
-    computer : 992px
+    tablet-size : 484px,
+    computer-size : 992px
 );

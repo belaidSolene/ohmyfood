@@ -16,27 +16,27 @@
     }
   }
 
-  @include tablet-only {
+  @include tablet {
     min-width: 13em;
     width: 45%;
   }
 
   @include computer-only {
     min-width: 18em;
-    width: 90%;
+    width: 96%;
   }
 
   &__title {
     font-size: 1em;
-    padding-top: $pad-card-menu;
+    padding-top: $padd-card-menu;
   }
 
 
   &__subtitle {
     grid-row-start: 2;
     font-size: 0.84em;
-    padding-bottom: $pad-card-menu;
-    padding-right: $pad-card-menu;
+    padding-bottom: $padd-card-menu;
+    padding-right: $padd-card-menu;
   }
 
   &--ellipsis {
@@ -47,7 +47,7 @@
 
   &__price {
     grid-area: 2;
-    padding-bottom: $pad-card-menu;
+    padding-bottom: $padd-card-menu;
   }
 
   &__check {

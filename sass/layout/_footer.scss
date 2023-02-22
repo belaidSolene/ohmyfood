@@ -1,14 +1,16 @@
 footer {
     background-color: $color-bg-footer;
     color: $color-contrast;
-    padding: 30px 25px;
+    padding: 2em 1.5em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 1em;
 
-    @include tablet-only {
+    @include tablet {
         align-items: center;
+        gap: 3em;
+        padding: 2.5em 2em 6em;
     }
 
     ul {
@@ -22,7 +24,7 @@ footer {
             }
         }
 
-        @include tablet-only { 
+        @include tablet { 
             width: 100%;
             flex-direction: row;
             justify-content: space-between;

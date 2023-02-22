@@ -6,7 +6,7 @@
         top: 0;
         left: 0;
         display: block;
-        font-size: $size-heart;
+        font-size: $size-heart;    
     }
 
     
@@ -34,6 +34,27 @@
         .heart__default {
             transform: scale(0.5);
             opacity: 0;
+        }
+    }
+
+    &--menu {
+        i {
+            @include tablet {
+                font-size: 2.5em;
+            }
+        }
+    }
+
+    &--index {
+        i {
+            @include tablet {
+                font-size: 2em;
+                top: -5px;
+            }
+
+            @include computer-only {
+                top: 0;
+            }
         }
     }
 }

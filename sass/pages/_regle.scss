@@ -10,7 +10,6 @@
     }
 
     &__box {
-        margin: 1.7em 0 0;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -27,7 +26,7 @@
             justify-content: center;
             width: 100%;
 
-            @include tablet-only {
+            @include tablet {
                 width: 77%;
             }
 
@@ -49,7 +48,7 @@
                 position: relative;
                 left: 1em;
 
-                @include tablet-only {
+                @include tablet {
                     height: 2.3em;
                     width: 2.3em;
                     font-size: 0.9em;
@@ -83,7 +82,7 @@
                     color: $color-bg-footer;
                     font-size: 1.2em;
 
-                    @include tablet-only {
+                    @include tablet {
                         font-size: 1.2em;
                     }
 
@@ -98,7 +97,7 @@
                     font-size: 0.86em;
                     font-weight: bold;
 
-                    @include tablet-only {
+                    @include tablet {
                         font-size: 1em;
                     }
 

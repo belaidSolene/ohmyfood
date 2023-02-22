@@ -15,6 +15,7 @@
 
   h4 {
       font-size: 1.5em;
+      margin-bottom: 1.7em;
   }
 
   footer {
@@ -23,10 +24,10 @@
           font-weight: 400;
       }
   }
-  
-  
+
+
   .ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
   }
